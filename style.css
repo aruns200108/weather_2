@@ -68,6 +68,13 @@ background: radial-gradient(at left top, #01849E, #2E2E2E);
   font-size: 1em;
   border: none;
 }
+
+button.AA{
+  background-color: #6d96fd;
+  border: none;
+  width: 70px;
+  border-radius: 3px;
+}
 .search-container input {
   padding: 0.7em;
   background-color: transparent;

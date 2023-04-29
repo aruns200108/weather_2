@@ -56,10 +56,9 @@ window.addEventListener("load", getWeather);
 
 function getWeatherData () {
     navigator.geolocation.getCurrentPosition((success) => {
-        
-        let {latitude, longitude } = success.coords;
+         let {latitude, longitude } = success.coords;
   
-        fetch(`http://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&limit=5&appid=b41ec3be35c7dac8aabbc21ba253137a`).then(res => res.json()).then(data => {
+        fetch(`http://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&appid=b41ec3be35c7dac8aabbc21ba253137a`).then(res => res.json()).then(data => {
          console.log(data)
         showWeatherData(data);
         })
