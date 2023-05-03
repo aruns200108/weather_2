@@ -5,7 +5,7 @@ function getWeather() {
   cityValue= city.value;
 
  city.value = "";
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityValue}&appid=b41ec3be35c7dac8aabbc21ba253137a&units=metric`).then((resp) => resp.json()).then((data) =>displayData(data)) 
+    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${cityValue}&appid=b41ec3be35c7dac8aabbc21ba253137a&units=metric`).then((resp) => resp.json()).then((data) =>displayData(data)) 
  
   }
 
@@ -56,9 +56,11 @@ window.addEventListener("load", getWeather);
 
 function getWeatherData () {
     navigator.geolocation.getCurrentPosition((success) => {
-         let {latitude, longitude } = success.coords;
-  
-        fetch(`http://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&appid=b41ec3be35c7dac8aabbc21ba253137a`).then(res => res.json()).then(data => {
+        
+        var {latitude, longitude } = success.coords;
+           var lat=latitude
+          var lon=longitude
+        fetch(`http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&appid=b41ec3be35c7dac8aabbc21ba253137a`).then(res => res.json()).then(data => {
          console.log(data)
         showWeatherData(data);
         })
@@ -74,7 +76,7 @@ function getWeatherData () {
    locName= Lname;
 
   city.value = "";
-      fetch(`https://api.openweathermap.org/data/2.5/weather?q=${locName}&appid=b41ec3be35c7dac8aabbc21ba253137a&units=metric`).then((resp) => resp.json()).then((data) =>displayData(data)) 
+      fetch(` http://api.openweathermap.org/data/2.5/weather?q=${locName}&appid=b41ec3be35c7dac8aabbc21ba253137a&units=metric `).then((resp) => resp.json()).then((data) =>displayData(data)) 
    
  
           }
