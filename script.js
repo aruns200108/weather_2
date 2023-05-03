@@ -5,7 +5,7 @@ function getWeather() {
   cityValue= city.value;
 
  city.value = "";
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${cityValue}&appid=b41ec3be35c7dac8aabbc21ba253137a&units=metric`).then((resp) => resp.json()).then((data) =>displayData(data)) 
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityValue}&appid=b41ec3be35c7dac8aabbc21ba253137a&units=metric`).then((resp) => resp.json()).then((data) =>displayData(data)) 
  
   }
 
@@ -76,7 +76,7 @@ function getWeatherData () {
    locName= Lname;
 
   city.value = "";
-      fetch(` http://api.openweathermap.org/data/2.5/weather?q=${locName}&appid=b41ec3be35c7dac8aabbc21ba253137a&units=metric `).then((resp) => resp.json()).then((data) =>displayData(data)) 
+      fetch(` https://api.openweathermap.org/data/2.5/weather?q=${locName}&appid=b41ec3be35c7dac8aabbc21ba253137a&units=metric `).then((resp) => resp.json()).then((data) =>displayData(data)) 
    
  
           }
