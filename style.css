@@ -82,11 +82,21 @@
 .search-container input:focus {
   border-color: var(--white);
 }
-.search-container button {
+ /* .search-container button {
   color: var(--white);
   background-color:rgb(0, 83, 116);
   border-radius: 0.3em;
  cursor: pointer;
+ 
+}  */
+.BT{
+  color: var(--white);
+  background-color:rgb(0, 83, 116);
+  border-radius: 0.3em;
+ cursor: pointer;
+ margin-top: 10px;
+ width:150px;
+ margin-left:-63px;
 }
 .search-container button:hover{
   background-image: radial-gradient(circle, #051937, #031635, #021333, #010f30, #000a2e);}
